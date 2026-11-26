@@ -22,14 +22,12 @@ public class PN : Ordination {
         {
             return false;
         }
-
-        // TODO: Implement!
+        dates.Add(givesDen);
         return true;
     }
 
     public override double doegnDosis() {
-    	// TODO: Implement!
-        return -1;
+        return (samletDosis() / antalDage());
     }
 
 
