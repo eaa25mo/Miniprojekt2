@@ -1,3 +1,4 @@
+using System;
 namespace shared.Model;
 
 public class PN : Ordination {
@@ -17,8 +18,13 @@ public class PN : Ordination {
     /// Returner false ellers og datoen givesDen ignoreres
     /// </summary>
     public bool givDosis(Dato givesDen) {
+        if(givesDen.dato < startDen && slutDen < givesDen.dato) 
+        {
+            return false;
+        }
+
         // TODO: Implement!
-        return false;
+        return true;
     }
 
     public override double doegnDosis() {
